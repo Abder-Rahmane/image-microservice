@@ -4,7 +4,7 @@
 ![Microservice](https://img.shields.io/badge/Microservice-red)
 ![FastAPI](https://img.shields.io/badge/FastAPI-green)
 ![Docker](https://img.shields.io/badge/Docker-blue)
-![Version](https://img.shields.io/badge/version-1.5.2--Beta-yellow)
+![Version](https://img.shields.io/badge/version-2.0.2--Beta-yellow)
 
 Focus Microservice Generator is a powerful VS Code extension designed to streamline the creation, management, and deployment of FastAPI microservices. This extension helps developers efficiently handle microservices with Docker.
 
@@ -14,11 +14,7 @@ Focus Microservice Generator is a powerful VS Code extension designed to streaml
 
 - **Create MicroService**: Quickly scaffold a new FastAPI microservice.
 - **Focus**: Easily navigate and open relevant files for a specific microservice.
-- **Deploy in Docker**: Start and manage microservices in Docker containers.
-- **Update Docker Containers**: Effortlessly update and restart Docker containers.
 - **Show Docker Logs**: View real-time logs from Docker containers.
-- **Restart Docker Containers**: Restart all Docker containers.
-- **Stop Docker Containers**: Stop all Docker containers.
 
 ## Quick Start
 
@@ -33,36 +29,48 @@ Focus Microservice Generator is a powerful VS Code extension designed to streaml
 
 1. Open the command palette (Ctrl+Shift+P)
 2. Type `MicroService: Create MicroService`
-3. Follow the prompts to create a new microservice
+3. Follow the prompts to create a new project and then create a new microservice within the project. If no project exists, it will prompt you to create one before creating the microservice.
+
 <br>
 
-![Create Microservice Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/create-microservice-demo.gif)
+![Create Microservice Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/create.gif)
 
 ### Deploying a Microservice
 
-1. Open the command palette (Ctrl+Shift+P)
-2. Type `MicroService: Deploy in Docker`
-3. Wait for the containers to start and view the logs
+1. In the sidebar, click on the Microservice Explorer view.
+2. Right-click on the microservice you want to deploy or click the play button next to the project to deploy all microservices within the project.
+3. Wait for the containers to start and view the logs.
+
 <br>
 
-![Deploy in Docker Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/deploy-docker-demo.gif)
+![Deploy in Docker Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/deploy.gif)
 
-### Working on a Microservice
+### Managing Microservices
 
-1. Open the command palette (Ctrl+Shift+P)
-2. Type `MicroService: Focus`
-3. Select the microservice you want to focus on
+Use the following commands to manage your microservices:
+
+1. **Start Microservice**
+2. **Stop Microservice**
+3. **Restart Microservice** (also updates the microservice)
+
+These commands can also be used to update the files and manage the state of your microservices.
+
+![Manage Microservices Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/command.gif)
 
 ### Additional Commands
 
-- **Update Docker Containers**: Use `Ctrl+Alt+U` to update and restart Docker containers.
-- **Restart Docker Containers**: Use `Ctrl+Alt+R` to restart all Docker containers.
-- **Stop Docker Containers**: Use `Ctrl+Alt+X` to stop all Docker containers.
-- **Show Docker Logs**: Use `Ctrl+Alt+L` to view real-time logs from Docker containers.
+In the menu with icons, you can access additional commands:
+
+1. **Focus on a Microservice**: Click the focus icon to navigate and open relevant files for a specific microservice.
+2. **Show Docker Logs**: Click the logs icon to view real-time logs from Docker containers for troubleshooting and monitoring.
+
+![Additional Commands Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/otherCommand.gif)
+
+
 
 ## Micro Service  Structure
 
-```plaintext
+```
 <rootPath>
 └── microservices
     └── example
