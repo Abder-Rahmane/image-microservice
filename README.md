@@ -4,7 +4,7 @@
 ![Microservice](https://img.shields.io/badge/Microservice-red)
 ![FastAPI](https://img.shields.io/badge/FastAPI-green)
 ![Docker](https://img.shields.io/badge/Docker-blue)
-![Version](https://img.shields.io/badge/version-2.0.2--Beta-yellow)
+![Version](https://img.shields.io/badge/version-2.7.1--Beta-yellow)
 
 Focus Microservice Generator is a powerful VS Code extension designed to streamline the creation, management, and deployment of FastAPI microservices. This extension helps developers efficiently handle microservices with Docker.
 
@@ -25,15 +25,17 @@ Focus Microservice Generator is a powerful VS Code extension designed to streaml
 3. Search for `MicroService FastAPI`
 4. Click Install
 
+<br>
+
 ### Creating a Microservice
 
 1. Open the command palette (Ctrl+Shift+P)
 2. Type `MicroService: Create MicroService`
 3. Follow the prompts to create a new project and then create a new microservice within the project. If no project exists, it will prompt you to create one before creating the microservice.
 
-<br>
-
 ![Create Microservice Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/create.gif)
+
+<br>
 
 ### Deploying a Microservice
 
@@ -41,9 +43,10 @@ Focus Microservice Generator is a powerful VS Code extension designed to streaml
 2. Right-click on the microservice you want to deploy or click the play button next to the project to deploy all microservices within the project.
 3. Wait for the containers to start and view the logs.
 
-<br>
 
 ![Deploy in Docker Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/deploy.gif)
+
+<br>
 
 ### Managing Microservices
 
@@ -57,6 +60,8 @@ These commands can also be used to update the files and manage the state of your
 
 ![Manage Microservices Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/command.gif)
 
+<br>
+
 ### Additional Commands
 
 In the menu with icons, you can access additional commands:
@@ -66,7 +71,22 @@ In the menu with icons, you can access additional commands:
 
 ![Additional Commands Demo](https://raw.githubusercontent.com/Abder-Rahmane/image-microservice/main/assets/otherCommand.gif)
 
+<br>
 
+## Alembic Migrations
+
+If you encounter issues with Alembic migrations, follow these steps to reset and reconfigure the migration setup :
+
+1. **Delete the existing Alembic directory and `alembic.ini` file**:
+```rm -rf alembic alembic.ini```
+
+2. **Create a new Alembic directory in the app/ directory**:
+```alembic init app/alembic```
+
+3. **Update the sqlalchemy.url in the alembic.ini file to match your database schema URL**:
+```sqlalchemy.url = <your_database_url>```
+
+<br>
 
 ## Micro Service  Structure
 
@@ -125,6 +145,14 @@ In the menu with icons, you can access additional commands:
         ├── Dockerfile
         └── README.md
 ```
+
+## Future Updates
+
+We are planning to add the following features in future updates:
+
+- A debugger to identify and fix issues when a microservice is not working correctly.
+- Automated data migration using Alembic.
+- Deployment support for multiple platforms including GCP, AWS, Heroku, and Vercel...
 
 ## Credits
 
